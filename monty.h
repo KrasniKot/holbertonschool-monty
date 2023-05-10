@@ -48,4 +48,5 @@ int execute(stack_t **stkorq, char *cntt, int line);
 void __push(stack_t **stack, unsigned int line);
 void adder(stack_t **top, int arg);
 void __pall(stack_t **stack, unsigned int line);
+void __pint(stack_t **stack, unsigned int line);
 #endif

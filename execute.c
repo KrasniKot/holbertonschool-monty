@@ -5,6 +5,7 @@ int execute(stack_t **stkorq, char *cntt, int line)
 	instruction_t opfc[] = {
 		{"push", __push},
 		{"pall", __pall},
+		{"pint", __pint},
 		{NULL, NULL}
 		};
 
