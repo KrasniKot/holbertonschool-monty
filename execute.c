@@ -14,19 +14,11 @@ int execute(stack_t **stkorq, char *cntt, int line)
 	char *arg = strtok(NULL, " \t\n");
 	stack_t *frstack;
 
-	arcdta.opcde = opcode;
 	arcdta.arg = arg;
 
-	for (i = 0; arcdta.arg && arcdta.opcde && opfc[i].opcode_t; i++)
+	for (i = 0; opfc[i].opcode_t; i++)
 		if (!strcmp(opcode, opfc[i].opcode_t))
 			opfc[i].f(stkorq, line);
-
-	while (*stkorq)
-	{
-		frstack = *stkorq;
-		*stkorq = (*stkorq)->next;
-		free(frstack);
-	}
 
 	return (0);
 }

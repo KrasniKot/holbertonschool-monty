@@ -35,5 +35,4 @@ void adder(stack_t **top, int arg)
     new->next = *top;
 	new->prev = NULL;
 	*top = new;
-    printf("new->n: %d\n", new->n);
 }

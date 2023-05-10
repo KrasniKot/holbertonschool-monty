@@ -1,5 +1,5 @@
 #include "monty.h"
-archdta arcdta = {NULL, NULL, NULL, NULL};
+archdta arcdta = {NULL, NULL, NULL};
 
 int main(int ac, char **av)
 {
