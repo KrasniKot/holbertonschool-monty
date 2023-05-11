@@ -1,7 +1,7 @@
 # MONTY INTERPRETER
 
 
-A Monty Interpreter is a software program that run programs written in the Monty programming language. 
+A Monty Interpreter is a software program that run programs written in the Monty programming language.
 Monty is a simple programming language designed for educational purposes and is similar in syntax to Python.
 
 Monty was created by Max E. Levchin, who was a Ukrainian-American entrepreneur and computer scientist. He first introduced the language in a blog post in August 2013.
