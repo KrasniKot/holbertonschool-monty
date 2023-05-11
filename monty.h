@@ -36,6 +36,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct ardta - contains the file data and allocated variables.
+ * @file: file.
+ * @contt: content.
+ * @arg: argument.
+*/
 typedef struct ardta {
 	FILE *file;
 	char *contt;
