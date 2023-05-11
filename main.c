@@ -1,5 +1,5 @@
 #include "monty.h"
-archdta arcdta = {NULL, NULL, NULL};
+archdta arcdta = {NULL, NULL, NULL, NULL};
 /**
  * main - main function
  * @ac: counter arguments
@@ -8,7 +8,7 @@ archdta arcdta = {NULL, NULL, NULL};
 */
 int main(int ac, char **av)
 {
-	int getchk = 1, line;
+	int getchk = 1, line = 0;
 	size_t size = 0;
 	FILE *ofle;
 	stack_t *stkorq = NULL;
@@ -27,10 +27,11 @@ int main(int ac, char **av)
 	}
 	arcdta.file = ofle;
 
-	for (line = 1; getchk > 0; line++)
+	while (getchk > 0)
 	{
 		arcdta.contt = NULL;
 		getchk = getline(&arcdta.contt, &size, ofle);
+		line++;
 		if (getchk > 0)
 			execute(&stkorq, arcdta.contt, line);
 		free(arcdta.contt);

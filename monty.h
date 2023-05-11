@@ -46,6 +46,7 @@ typedef struct ardta
 {
 	FILE *file;
 	char *contt;
+	char *opcde;
 	char *arg;
 } archdta;
 extern archdta arcdta;

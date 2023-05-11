@@ -7,9 +7,11 @@
 */
 void __push(stack_t **stack, unsigned int line)
 {
-	int idx;
+	int idx = 0;
 
-	if (!arcdta.arg)
+	if (arcdta.arg && arcdta.arg[0] == 45)
+		idx++;
+	if (!arcdta.arg || !arcdta.opcde)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line);
 		free(arcdta.contt);
@@ -18,7 +20,7 @@ void __push(stack_t **stack, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 
-	for (idx = 0; arcdta.arg && arcdta.arg[idx]; idx++)
+	for (; arcdta.arg && arcdta.arg[idx]; idx++)
 	{
 		if (arcdta.arg[idx] < 48 || arcdta.arg[idx] > 57)
 		{
@@ -30,7 +32,8 @@ void __push(stack_t **stack, unsigned int line)
 		}
 	}
 
-	adder(stack, atoi(arcdta.arg));
+	if (arcdta.arg)
+		adder(stack, atoi(arcdta.arg));
 }
 /**
  * adder - add a node
