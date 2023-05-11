@@ -25,6 +25,7 @@ void adder(stack_t **top, int arg)
     if (!new)
     {
         fprintf(stderr, "Error: malloc failed\n");
+        fclose(arcdta.file);
         exit(EXIT_FAILURE);
     }
 
@@ -35,4 +36,16 @@ void adder(stack_t **top, int arg)
     new->next = *top;
 	new->prev = NULL;
 	*top = new;
+}
+
+void __pop(stack_t **stack, unsigned int line)
+{
+    stack_t *topcpy = *stack;
+
+    while(topcpy->next)
+        topcpy = topcpy->next;
+
+    *stack = topcpy->prev;
+    free((*stack)->next);
+
 }
