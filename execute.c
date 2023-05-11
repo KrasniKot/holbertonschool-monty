@@ -21,14 +21,13 @@ int execute(stack_t **stkorq, char *cntt, int line)
 	char *opcode = strtok(cntt, " \t\n");
 	char *arg = strtok(NULL, " \t\n");
 
-	arcdta.opcde;
 	arcdta.arg = arg;
 
-	for (i = 0; opfc[i].opcode_t; i++)
+	for (i = 0; opcode && opfc[i].opcode_t; i++)
 		if (!strcmp(opcode, opfc[i].opcode_t))
 		{
 			opfc[i].f(stkorq, line);
-			return(0);
+			return (0);
 		}
 
 	if (opcode && !opfc[i].opcode_t)
@@ -39,4 +38,5 @@ int execute(stack_t **stkorq, char *cntt, int line)
 		fclose(arcdta.file);
 		exit(EXIT_FAILURE);
 	}
+	return (0);
 }

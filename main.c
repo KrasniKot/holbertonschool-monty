@@ -1,5 +1,5 @@
 #include "monty.h"
-archdta arcdta = {NULL, NULL, NULL, NULL};
+archdta arcdta = {NULL, NULL, NULL};
 /**
  * main - main function
  * @ac: counter arguments

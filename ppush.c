@@ -11,7 +11,7 @@ void __push(stack_t **stack, unsigned int line)
 
 	if (arcdta.arg && arcdta.arg[0] == 45)
 		idx++;
-	if (!arcdta.arg || !arcdta.opcde)
+	if (!arcdta.arg)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line);
 		free(arcdta.contt);
