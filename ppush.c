@@ -35,7 +35,7 @@ void adder(stack_t **top, int arg)
     new->n = arg;
     new->next = *top;
 	new->prev = NULL;
-	*top = new;
+    *top = new;
 }
 
 void __pop(stack_t **stack, unsigned int line)

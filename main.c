@@ -6,7 +6,7 @@ int main(int ac, char **av)
 	int getchk = 1, line;
 	size_t size = 0;
 	FILE *ofle;
-	stack_t *stkorq = NULL;
+	stack_t *stkorq = NULL, *frestk;
 
 	if (ac != 2)
 	{
@@ -32,5 +32,12 @@ int main(int ac, char **av)
 	}
 
 	fclose(ofle);
+	frestk = stkorq;
+	while (stkorq)
+	{
+		frestk = frestk->next;
+		free(stkorq);
+		stkorq = frestk;
+	}
 	return (0);
 }

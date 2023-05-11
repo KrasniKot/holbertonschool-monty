@@ -7,13 +7,13 @@ int execute(stack_t **stkorq, char *cntt, int line)
 		{"pall", __pall},
 		{"pint", __pint},
 		{"swap", __swap},
+		{"add", __add},
 		{NULL, NULL}
 		};
 
 	int i;
 	char *opcode = strtok(cntt, " \t\n");
 	char *arg = strtok(NULL, " \t\n");
-	stack_t *frstack;
 
 	arcdta.arg = arg;
 
