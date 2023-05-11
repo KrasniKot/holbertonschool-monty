@@ -32,7 +32,7 @@ int execute(stack_t **stkorq, char *cntt, int line)
 
 	if (opcode && !opfc[i].opcode_t)
 	{
-		fprintf(stderr, "L%d, unknown instruction %s", line, opcode);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
 		frenos(*stkorq);
 		free(arcdta.contt);
 		fclose(arcdta.file);
