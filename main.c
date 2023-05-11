@@ -27,7 +27,7 @@ int main(int ac, char **av)
 	}
 	arcdta.file = ofle;
 
-	for (line = 0; getchk > 0; line++)
+	for (line = 1; getchk > 0; line++)
 	{
 		arcdta.contt = NULL;
 		getchk = getline(&arcdta.contt, &size, ofle);
