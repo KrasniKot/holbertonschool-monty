@@ -9,6 +9,15 @@ void __push(stack_t **stack, unsigned int line)
 {
 	int idx;
 
+	if (!arcdta.arg)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line);
+		free(arcdta.contt);
+		fclose(arcdta.file);
+		frenos(*stack);
+		exit(EXIT_FAILURE);
+	}
+
 	for (idx = 0; arcdta.arg && arcdta.arg[idx]; idx++)
 	{
 		if (arcdta.arg[idx] < 48 || arcdta.arg[idx] > 57)
@@ -16,6 +25,7 @@ void __push(stack_t **stack, unsigned int line)
 			fprintf(stderr, "L%d: usage: push integer\n", line);
 			free(arcdta.contt);
 			fclose(arcdta.file);
+			frenos(*stack);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -36,6 +46,8 @@ void adder(stack_t **top, int arg)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		fclose(arcdta.file);
+		free(arcdta.contt);
+		frenos(*top);
 		exit(EXIT_FAILURE);
 	}
 

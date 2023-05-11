@@ -23,7 +23,7 @@ int execute(stack_t **stkorq, char *cntt, int line)
 
 	arcdta.arg = arg;
 
-	for (i = 0; opfc[i].opcode_t; i++)
+	for (i = 0; opcode && opfc[i].opcode_t; i++)
 		if (!strcmp(opcode, opfc[i].opcode_t))
 			opfc[i].f(stkorq, line);
 
