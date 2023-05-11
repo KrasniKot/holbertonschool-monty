@@ -41,6 +41,10 @@ int main(int ac, char **av)
 	return (0);
 }
 
+/**
+ * frenos - frees an linked list.
+ * @stkorq: node.
+*/
 void frenos(stack_t *stkorq)
 {
 	stack_t *frestk = stkorq;
