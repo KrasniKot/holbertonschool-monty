@@ -9,6 +9,7 @@ void __pall(stack_t **stack, unsigned int line)
 {
 	stack_t *stkcpy = *stack;
 
+	(void) line;
 	while (stkcpy)
 	{
 		printf("%d\n", stkcpy->n);

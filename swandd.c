@@ -39,6 +39,7 @@ void __add(stack_t **stack, unsigned int line)
 {
 	stack_t *topcpy = *stack;
 
+	(void) line;
 	topcpy->next->n += topcpy->n;
 	*stack = topcpy->next;
 	free(topcpy);
@@ -51,6 +52,6 @@ void __add(stack_t **stack, unsigned int line)
 */
 void __nop(stack_t **stack, unsigned int line)
 {
-	void(stack);
-	void(line);
+	(void) stack;
+	(void) line;
 }
