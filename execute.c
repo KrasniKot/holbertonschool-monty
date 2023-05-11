@@ -25,7 +25,10 @@ int execute(stack_t **stkorq, char *cntt, int line)
 
 	for (i = 0; opcode && opfc[i].opcode_t; i++)
 		if (!strcmp(opcode, opfc[i].opcode_t))
+		{
 			opfc[i].f(stkorq, line);
+			return(0);
+		}
 	
 	fprintf(stderr, "L%d, unknown instruction %s", line, opcode);
 	frenos(*stkorq);
