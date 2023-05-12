@@ -15,7 +15,7 @@ void __swap(stack_t **stack, unsigned int line)
 
 	if (i < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short", line);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
 		fclose(arcdta.file);
 		frenos(*stack);
 		free(arcdta.contt);
