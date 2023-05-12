@@ -77,13 +77,12 @@ void __pop(stack_t **stack, unsigned int line)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line);
 		fclose(arcdta.file);
 		free(arcdta.contt);
+		frenos(*stack);
 		exit(EXIT_FAILURE);
 	}
 	(void) line;
-	while (topcpy->next)
-		topcpy = topcpy->next;
 
-	*stack = topcpy->prev;
-	free((*stack)->next);
+	*stack = topcpy->next;
+	free(topcpy);
 
 }
