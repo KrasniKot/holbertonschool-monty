@@ -42,7 +42,7 @@ void __add(stack_t **stack, unsigned int line)
 	for (i = 1; topcpy && topcpy->next; i++)
 		topcpy = topcpy->next;
 
-	if (i < i < 2)
+	if (i < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line);
 		fclose(arcdta.file);
