@@ -37,8 +37,12 @@ void __swap(stack_t **stack, unsigned int line)
 void __add(stack_t **stack, unsigned int line)
 {
 	stack_t *topcpy = *stack;
+	int i;
 
-	if (i < 2)
+	for (i = 1; topcpy && topcpy->next; i++)
+		topcpy = topcpy->next;
+
+	if ()
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line);
 		fclose(arcdta.file);
