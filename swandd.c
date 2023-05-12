@@ -10,7 +10,7 @@ void __swap(stack_t **stack, unsigned int line)
 	stack_t *topcpy = *stack;
 	int i;
 
-	for (i = 0; topcpy && topcpy->next; i++)
+	for (i = 1; topcpy && topcpy->next; i++)
 		topcpy = topcpy->next;
 
 	if (i < 2)

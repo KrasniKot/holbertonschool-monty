@@ -1,3 +1,6 @@
 push 98
-pop Holberton
+push 402
+push 99
+push 2398
+swap Holberton
 pall
