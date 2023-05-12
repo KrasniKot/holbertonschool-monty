@@ -8,18 +8,17 @@
 void __swap(stack_t **stack, unsigned int line)
 {
 	stack_t *topcpy = *stack;
-	int i = 0;
+	int i;
 
-	while (topcpy && topcpy->next)
-	{
+	for (i = 0; topcpy && topcpy->next; i++)
 		topcpy = topcpy->next;
-		i++;
-	}
 
 	if (i < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short", line);
 		fclose(arcdta.file);
+		frenos(*stack);
+		free(arcdta.contt);
 		exit(EXIT_FAILURE);
 	}
 
