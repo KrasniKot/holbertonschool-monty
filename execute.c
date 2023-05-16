@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * execute - main function execute de opcode
  * @stkorq: node
@@ -18,6 +19,7 @@ int execute(stack_t **stkorq, char *cntt, int line)
 		{"nop", __nop},
 		{"sub", __sub},
 		{"div", __div},
+		{"mul", __mul},
 		{NULL, NULL}
 		};
 
