@@ -7,17 +7,18 @@
  */
 void __pchar(stack_t **stack, unsigned int line)
 {
-	if ((*stack)->n < 0 || (*stack)->n > 127)
+	if (!*stack)
 	{
-		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line);
 		fclose(arcdta.file);
 		free(arcdta.contt);
 		frenos(*stack);
 		exit(EXIT_FAILURE);
 	}
-	if (!*stack)
+
+	if (*stack && (*stack)->n < 0 || (*stack)->n > 127)
 	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", line);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
 		fclose(arcdta.file);
 		free(arcdta.contt);
 		frenos(*stack);
