@@ -38,6 +38,8 @@ int execute(stack_t **stkorq, char *cntt, int line)
 			return (0);
 		}
 
+	if (opcode[0] == 35)
+		return (0);
 	if (opcode && !opfc[i].opcode_t)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
