@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * sub - subtracts the top elements of the stack.
+ * __sub - subtracts the top elements of the stack.
  * @stack: node.
  * @line: current line.
  */
@@ -30,7 +30,7 @@ void __sub(stack_t **stack, unsigned int line)
 }
 
 /**
- * div - divides the top elements of the stack.
+ * __div - divides the top elements of the stack.
  * @stack: node.
  * @line: current line.
  */
@@ -67,7 +67,7 @@ void __div(stack_t **stack, unsigned int line)
 }
 
 /**
- * mul - multiplies the top elements of the stack.
+ * __mul - multiplies the top elements of the stack.
  * @stack: node.
  * @line: current line.
  */
