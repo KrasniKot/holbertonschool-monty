@@ -60,5 +60,7 @@ void __swap(stack_t **stack, unsigned int line);
 void __add(stack_t **stack, unsigned int line);
 void __nop(stack_t **stack, unsigned int line);
 void frenos(stack_t *stkorq);
+void __sub(stack_t **stack, unsigned int line);
+
 
 #endif

@@ -16,6 +16,7 @@ int execute(stack_t **stkorq, char *cntt, int line)
 		{"swap", __swap},
 		{"add", __add},
 		{"nop", __nop},
+		{"sub", __sub},
 		{NULL, NULL}
 		};
 
