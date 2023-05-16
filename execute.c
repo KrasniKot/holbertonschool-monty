@@ -20,6 +20,7 @@ int execute(stack_t **stkorq, char *cntt, int line)
 		{"sub", __sub},
 		{"div", __div},
 		{"mul", __mul},
+		{"mod", __mod},
 		{NULL, NULL}
 		};
 

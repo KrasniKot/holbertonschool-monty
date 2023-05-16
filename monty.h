@@ -63,5 +63,7 @@ void frenos(stack_t *stkorq);
 void __sub(stack_t **stack, unsigned int line);
 void __div(stack_t **stack, unsigned int line);
 void __mul(stack_t **stack, unsigned int line);
+void __mod(stack_t **stack, unsigned int line);
+
 
 #endif
