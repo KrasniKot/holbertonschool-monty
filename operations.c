@@ -97,7 +97,7 @@ void __mul(stack_t **stack, unsigned int line)
 }
 
 /**
- * __mod - stres the rest of the division between the top elements.
+ * __mod - stores the rest of the division between the top elements.
  * @stack: node.
  * @line: current line.
  */
