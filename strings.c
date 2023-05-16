@@ -16,7 +16,7 @@ void __pchar(stack_t **stack, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 
-	if (*stack && (*stack)->n < 0 || (*stack)->n > 127)
+	if ((*stack)->n < 0 || (*stack)->n > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
 		fclose(arcdta.file);
